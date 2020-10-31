@@ -1,0 +1,76 @@
+% ------------------------- Setup and configuration -------------------------
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% for serious mathematical typesetting, https://www.ctan.org/pkg/amsmath
+\usepackage{amsmath}
+
+% enhances the quality of tables, https://www.ctan.org/pkg/booktabs/
+\usepackage{booktabs}
+
+% improve captions that appear above tables
+\usepackage{caption}
+
+% use H to place figures and tables at exact location, https://www.ctan.org/pkg/float
+\usepackage{float}
+
+% improved graphics capabilities for figures, https://ctan.org/pkg/graphicx
+\usepackage{graphicx}
+
+% create hyperlinks in the document and disable border, https://ctan.org/pkg/hyperref
+\usepackage[hidelinks]{hyperref}
+
+% write tables that continue to the next page, https://ctan.org/pkg/longtable
+\usepackage{longtable}
+
+\usepackage{subcaption}
+
+% greek letters in text without math mode, https://www.ctan.org/pkg/textgreek
+\usepackage{textgreek}
+
+% color for text and tables, https://www.ctan.org/pkg/xcolor
+\usepackage[table]{xcolor}
+
+% bibliography package and references file, https://www.ctan.org/pkg/biblatex
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+% ------------------------- Document -------------------------
+
+% Note: disabled the page anchors for the title page to prevent warnings about
+% duplicate page numbering.
+
+\title{Modeling Report for the Entrained Flow Reactor}
+\author{Gavin M. Wiggins}
+\date{\today}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+    \maketitle
+    \thispagestyle{empty}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+
+\tableofcontents
+\newpage
+
+\input{sections/01-introduction}
+\input{sections/02-experimental-apparatus}
+\input{sections/03-experimental-measurements}
+\input{sections/04-model-development}
+\input{sections/05-sensitivity-analysis}
+\input{sections/06-blend3-feedstock-results}
+\input{sections/07-forest-residue-results}
+\input{sections/08-conclusions}
+\input{sections/09-source-code}
+\input{sections/10-compute-resources}
+\input{sections/11-acknowledgments}
+\input{sections/12-appendix}
+
+\printbibliography
+\addcontentsline{toc}{section}{References}
+
+\end{document}
